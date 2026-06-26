@@ -63,21 +63,6 @@ meson install -C build/
 
 This installs the theme as **`Arc-Babu-Gray`** into `~/.local/share/themes/`.
 
-Apply it via `~/.config/gtk-3.0/settings.ini`:
-
-```ini
-[Settings]
-gtk-theme-name=Arc-Babu-Gray
-```
-
-and `~/.gtkrc-2.0`:
-
-```
-gtk-theme-name="Arc-Babu-Gray"
-```
-
-…or pick **Arc-Babu-Gray** in `lxappearance` / `nwg-look`.
-
 ### Re-applying the recolor
 
 The recolor is reproducible from one idempotent script, `tools/recolor-gray.py`,
