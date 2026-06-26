@@ -47,22 +47,47 @@ _Note: This theme was generated using Claude Code, using the Opus 4.8 model._
 
 ## Building and installing
 
-The recolor is reproducible from one script, `tools/recolor-gray.py`, which
-remaps colors across the SCSS sources, the SVG asset sources, and the GTK2
-`gtkrc` files. The core GTK palette files are already recolored in this repo; to
-recolor the rest (all SVG widget assets and the other desktop-environment
-sources) run it once, then build with Meson:
+The whole tree is already recolored, so just build the dark variant with Meson.
+On i3 you only need the GTK themes, so restrict `-Dthemes` to avoid pulling in
+Cinnamon/GNOME-Shell (Meson errors out probing for a Cinnamon version otherwise):
 
 ```bash
-python3 tools/recolor-gray.py common
+# deps (Arch): meson sassc glib2 inkscape
+meson setup --prefix="$HOME/.local" -Dthemes=gtk2,gtk3,gtk4 -Dvariants=dark build/
 
-meson setup --prefix=$HOME/.local -Dvariants=dark build/
+# render assets single-threaded: Inkscape 1.x instances collide over DBus when
+# run in parallel, so -j1 avoids random "Gio::DBus::Error" failures
+ninja -C build/ -j1
 meson install -C build/
 ```
 
-Build dependencies: `meson`, `sassc`, and `inkscape` (to render the GTK PNG
-widget assets from the recolored SVG sources). The script is idempotent, so
-re-running it is safe.
+This installs the theme as **`Arc-Babu-Gray`** into `~/.local/share/themes/`.
+
+Apply it (on i3, no settings daemon) — `~/.config/gtk-3.0/settings.ini`:
+
+```ini
+[Settings]
+gtk-theme-name=Arc-Babu-Gray
+```
+
+and `~/.gtkrc-2.0`:
+
+```
+gtk-theme-name="Arc-Babu-Gray"
+```
+
+…or pick **Arc-Babu-Gray** in `lxappearance` / `nwg-look`.
+
+### Re-applying the recolor
+
+The recolor is reproducible from one idempotent script, `tools/recolor-gray.py`,
+which remaps colors across the SCSS sources, SVG asset sources and GTK2 `gtkrc`
+files. The committed tree is already recolored; run it only if you reset to
+upstream Arc or want to tweak the palette:
+
+```bash
+python3 tools/recolor-gray.py common
+```
 
 To tweak the palette, edit `EXPLICIT_OVERRIDE` in `tools/recolor-gray.py` (or the
 `$bg_color` / `$selected_bg_color` etc. variables in `common/gtk-*/sass/_colors.scss`)
