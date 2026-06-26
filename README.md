@@ -7,6 +7,10 @@ gray-blue.
 
 _Note: This theme was modified using Claude Code, using the Opus 4.8 model._
 
+### GTK4
+<img width="1920" height="1010" alt="image" src="https://github.com/user-attachments/assets/306e951e-031f-491a-b6fa-b0bfe1578bf8" />
+
+### GTK3
 <img width="1920" height="1010" alt="image" src="https://github.com/user-attachments/assets/634b7fdf-394b-4af3-a610-da629e62054f" />
 
 ## Palette (dark variant)
