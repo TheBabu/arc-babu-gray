@@ -53,7 +53,8 @@ def convert(hexstr):
     if h in EXPLICIT_OVERRIDE:
         return EXPLICIT_OVERRIDE[h]
     if h in ACCENT_MAP:
-        return ACCENT_MAP[h]
+        new = ACCENT_MAP[h]
+        return None if new == h else new   # don't report identity no-ops as changes
     r, g, b = int(h[0:2],16), int(h[2:4],16), int(h[4:6],16)
     spread = max(r,g,b) - min(r,g,b)
     if spread == 0:
