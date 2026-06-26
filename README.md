@@ -1,7 +1,7 @@
 # Arc Babu Gray
 
 A personal **neutral-gray** fork of the [Arc theme](https://github.com/jnsh/arc-theme),
-recolored to match a gray i3 / polybar setup. Arc's blue-tinted greys are
+recolored to match a gray polybar setup. Arc's blue-tinted greys are
 neutralized to true gray, and the bright blue accent is replaced with a muted
 gray-blue.
 
@@ -48,7 +48,7 @@ _Note: This theme was generated using Claude Code, using the Opus 4.8 model._
 ## Building and installing
 
 The whole tree is already recolored, so just build the dark variant with Meson.
-On i3 you only need the GTK themes, so restrict `-Dthemes` to avoid pulling in
+You only need the GTK themes, so restrict `-Dthemes` to avoid pulling in
 Cinnamon/GNOME-Shell (Meson errors out probing for a Cinnamon version otherwise):
 
 ```bash
@@ -63,7 +63,7 @@ meson install -C build/
 
 This installs the theme as **`Arc-Babu-Gray`** into `~/.local/share/themes/`.
 
-Apply it (on i3, no settings daemon) — `~/.config/gtk-3.0/settings.ini`:
+Apply it via `~/.config/gtk-3.0/settings.ini`:
 
 ```ini
 [Settings]
