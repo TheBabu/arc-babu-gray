@@ -7,11 +7,7 @@ gray-blue.
 
 _Note: This theme was modified using Claude Code, using the Opus 4.8 model._
 
-![Schematic preview of the Arc Babu Gray dark theme](.github/preview-dark.png)
-
-> A schematic mockup (header, sidebar, selection, accent button, close button)
-> rendered with the actual theme colors on a polybar-colored backdrop — not a
-> live screenshot. Build and install to see it on real widgets.
+<img width="1920" height="1010" alt="image" src="https://github.com/user-attachments/assets/634b7fdf-394b-4af3-a610-da629e62054f" />
 
 ## Palette (dark variant)
 
