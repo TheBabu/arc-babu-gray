@@ -13,7 +13,7 @@ fs = import('fs')
 variant_name = {
   'light' : (get_option('transparency') ? 'Arc' : 'Arc-solid'),
   'darker' : (get_option('transparency') ? 'Arc-Darker' : 'Arc-Darker-solid'),
-  'dark' : (get_option('transparency') ? 'Arc-Dark' : 'Arc-Dark-solid'),
+  'dark' : (get_option('transparency') ? 'Arc-Babu-Gray' : 'Arc-Babu-Gray-solid'),
   'lighter' : (get_option('transparency') ? 'Arc-Lighter' : 'Arc-Lighter-solid'),
 }
 
