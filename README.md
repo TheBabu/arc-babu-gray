@@ -5,7 +5,7 @@ recolored to match a gray i3 / polybar setup. Arc's blue-tinted greys are
 neutralized to true gray, and the bright blue accent is replaced with a muted
 gray-blue.
 
-Note: This theme was generated using Claude Code, using the Opus 4.8 model.
+_Note: This theme was generated using Claude Code, using the Opus 4.8 model._
 
 ![Schematic preview of the Arc Babu Gray dark theme](.github/preview-dark.png)
 
