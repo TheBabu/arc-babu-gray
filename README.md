@@ -1,4 +1,4 @@
-# Arc — Babu Gray
+# Arc Babu Gray
 
 A personal **neutral-gray** fork of the [Arc theme](https://github.com/jnsh/arc-theme),
 recolored to match a gray i3 / polybar setup. Arc's blue-tinted greys are
